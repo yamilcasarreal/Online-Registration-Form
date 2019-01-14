@@ -5,7 +5,7 @@
 body {
   margin: 0 auto;
   width: 100%;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   /* padding: 0; */
 }
 
@@ -45,6 +45,9 @@ form {
   margin-top: 5px;
   border-top: solid 3px black;
   /* background: #EFC9A2; */
+}
+.background {
+  background: #EFECEC;
 }
 fieldset {
   border: 0;
@@ -97,12 +100,18 @@ select
   transition: all .2s ease-out;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
   width: 15px;
   height: 15px;
   /* background: white; */
   border-radius: 2px;
   margin-top: 20px;
+}
+
+.newsLetter input:hover,
+button:hover {
+  cursor: pointer;
 }
 
 input::placeholder {
@@ -152,12 +161,16 @@ button {
   height: 100px;
   /* outline: none; */
   border: none;
+  transition: all 0.5s ease-out;
+}
+button:hover {
+  border: 2px solid blue;
 }
 .center {
   text-align: center;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .main {
     width: 50%;
   }
@@ -168,11 +181,21 @@ button {
     /* justify-content: space-around; */
     /* flex-wrap: wrap; */
   }
-  .contact label {
-
+  .flex label {
+    min-width: 10em;
+    margin-top: 2em;
   }
-  .contact input {
-
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    /* background: white; */
+    border-radius: 2px;
+    margin-top: 20px;
   }
+  /* .flex label,
+  .flex input {
+    display: inline;
+  } */
 
 }
